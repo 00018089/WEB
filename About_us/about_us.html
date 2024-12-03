@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AboutUs</title>
+    <link rel="stylesheet" href="/About_us/about_us_style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="/images/Artel_logo_white_EN.svg" alt="Logo">
+        </div>
+        <div class="nav">
+            <button><a href="/Consumer/consum.html" style="text-decoration: none;color: black;">Consumer</a></button>
+            <button><a href="/Bussines/business.html" style="text-decoration: none;color: black;">Products</a></button>
+            <button id="menu-button">Menu</button>
+        </div>
+        <nav id="hamburger-menu" class="hidden">
+            <ul>
+                <li><a href="/main/index.html">Home</a></li>
+                <li><a href="/About_us/about_us.html">About</a></li>
+                <li><a href="/Services/service.html">Services</a></li>
+                <li><a href="/contact_us/contactus.html">Contact</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <div class="main-features">
+        <h1>ARTEL is an ambitious brand of household appliances, proclaimed a leader in reliability and efficiency among
+            end users.</h1>
+        <p>The Artel brand's key feature is multi-category, with more than 33 categories including solutions for
+            household appliances in the kitchen, living room, and cleaning, allowing you to fully equip your home with
+            modern appliances.</p>
+    </div>
+    <div class="main-img">
+        <img src="/images/workers-desktopandtablet.webp" alt="">
+    </div>
+
+    <div class="vision_value">
+        <img src="/images/vision-1920.webp" alt="vision">
+        <div class="vision-txt">
+            <h1>Our Vision</h1>
+            <p>To become an innovative manufacturer of the best appliance solutions for home and business</p>
+        </div>
+    </div>
+    <div class="misson-txt">
+        <h1>Our Mission</h1>
+        <p>To create reliable and cost-effective home appliances for every household</p>
+    </div>
+
+    <div class="slideshow-container">
+        <div class="container-1">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="/images/about_us_imgs/mission-img-1.webp" style="width:100%">
+                <div class="overlay">
+                    Openness
+                </div>
+            </div>
+        </div>
+
+        <div class="container-2">
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="/images/about_us_imgs/mission-img-2.webp" style="width:100%">
+                <div class="overlay">Innovation</div>
+            </div>
+        </div>
+        <div class="container-3">
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="/images/about_us_imgs/mission-img-3.webp" style="width:100%">
+                <div class="overlay">Reliability</div>
+            </div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

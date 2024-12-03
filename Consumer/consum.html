@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumer</title>
+    <link rel="stylesheet" href="./consum_style.css">
+</head>
+
+<body>
+
+
+    <header>
+        <div class="logo">
+            <img src="/images/Artel_logo_white_EN.svg" alt="Logo">
+        </div>
+        <div class="nav">
+            <button><a href="/Consumer/consum.html" style="text-decoration: none;color: black;">Consumer</a></button>
+            <button><a href="/Bussines/business.html" style="text-decoration: none;color: black;">Products</a></button>
+            <button id="menu-button">Menu</button>
+        </div>
+    </header>
+    <nav id="hamburger-menu" class="hidden">
+        <ul>
+            <li><a href="/main/index.html">Home</a></li>
+            <li><a href="/About_us/about_us.html">About</a></li>
+            <li><a href="/Services/service.html">Services</a></li>
+            <li><a href="/contact_us/contactus.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="repair-status">
+            <a class="back-button" href="#">Back</a>
+            <h1>How to check the repair status?</h1>
+            <p>Enter the application id (see SMS from 3700 number)</p>
+            <div class="input-section">
+                <input type="text" placeholder="Series number*" id="seriesNumber">
+                <button id="applyButton">Apply</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <footer>
+            <div class="footer-top">
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <ul>
+                        <li><a href="#">About company</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Download catalog</a></li>
+                        <li><a href="#">Where to buy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Guarantee</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Download instructions</a></li>
+                        <li><a href="#">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><a href="mailto:info@artelectronics.com">info@artelectronics.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-social">
+                <a href="#" class="social-icon"><img src="/images/socila_media_icons/facebook.png" alt="Facebook"></a>
+                <a href="#" class="social-icon"><img src="/images/socila_media_icons/instagram.jpg" alt="Instagram"></a>
+                <a href="#" class="social-icon"><img src="/images/socila_media_icons/telegram.png" alt="Telegram"></a>
+                <a href="#" class="social-icon"><img
+                        src="/images/socila_media_icons/62d03598d35266cf27dd0104_ilinkedin.png" alt="LinkedIn"></a>
+                <a href="#" class="social-icon"><img src="/images/socila_media_icons/white-twitter-logo-icon-6.png"
+                        alt="Twitter"></a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; This website was created to fulfill Web Technology
+                    module’s requirements and does not represent an actual company or service</p>
+            </div>
+        </footer>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuButton = document.getElementById("menu-button");
+            const hamburgerMenu = document.getElementById("hamburger-menu");
+
+            menuButton.addEventListener("click", function () {
+                hamburgerMenu.classList.toggle("hidden");
+            });
+        });
+        document.getElementById('applyButton').addEventListener('click', function () {
+            const seriesNumber = document.getElementById('seriesNumber').value;
+
+            if (!seriesNumber) {
+                alert('Please enter a series number.');
+            } else {
+                // Placeholder: You can send this value to the backend
+                console.log(`Series number entered: ${seriesNumber}`);
+                alert('Repair status functionality is under development.');
+            }
+        });
+    </script>
+
+</body>
+
+</html>

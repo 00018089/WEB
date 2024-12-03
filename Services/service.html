@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service</title>
+    <link rel="stylesheet" href="./service.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="/images/Artel_logo_green_EN.svg" alt="Logo">
+        </div>
+        <div class="nav">
+            <button><a href="/Consumer/consum.html" style="text-decoration: none;color: black;">Consumer</a></button>
+            <button><a href="/Bussines/business.html" style="text-decoration: none;color: black;">Products</a></button>
+            <button id="menu-button">Menu</button>
+        </div>
+        <nav id="hamburger-menu" class="hidden">
+            <ul>
+                <li><a href="/main/index.html">Home</a></li>
+                <li><a href="/About_us/about_us.html">About</a></li>
+                <li><a href="/Services/service.html">Services</a></li>
+                <li><a href="/contact_us/contactus.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <div class="service-container">
+            <div class="service-text">
+                <h1>Find a service center</h1>
+                <p id="no-wrap">Contact your nearest Artel service center, and our experienced technicians will fix the
+                    problem as soon as possible.</p>
+            </div>
+            <img id="bolt" src="/images/service-bolt.svg" alt="bolt">
+            <img id="frame" src="/images/frame-tablet.svg" alt="frame">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <h1>35 service centers at your service</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Find">
+            </div>
+            <div class="breadcrumb">
+                <span>Uzbekistan</span> &gt; <span>Tashkent</span>
+            </div>
+            <div class="service-list">
+                <div class="service-item">
+                    <div class="service-logo"></div>
+                    <div class="service-details">
+                        <h2>Artel servis markazi</h2>
+                        <p>Shopping center Zarafshan<br>Location: Behind the Lada salon</p>
+                        <p class="hours">From 10:00 To 18:00</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-logo"></div>
+                    <div class="service-details">
+                        <h2>Artel servis markazi</h2>
+                        <p>Navoi city, 17th microdistrict,<br>Memoral street, building 2, 22A<br>Location: opposite the
+                            Mortgage bank.</p>
+                        <p class="hours">From 10:00 To 18:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="map">
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuButton = document.getElementById("menu-button");
+            const hamburgerMenu = document.getElementById("hamburger-menu");
+
+            menuButton.addEventListener("click", function () {
+                hamburgerMenu.classList.toggle("hidden");
+            });
+        });
+
+
+        // Add map
+        var map = L.map('map').setView([41.2995, 69.2401], 13);
+
+        // Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Add markers for service centers
+        L.marker([41.3111, 69.2797]).addTo(map)
+            .bindPopup('<b>Artel Servis Markazi</b><br>Shopping center Zarafshan')
+            .openPopup();
+
+        L.marker([41.3275, 69.2532]).addTo(map)
+            .bindPopup('<b>Artel Servis Markazi</b><br>Navoi city, 17th microdistrict');
+    </script>
+
+</body>
+
+</html>
